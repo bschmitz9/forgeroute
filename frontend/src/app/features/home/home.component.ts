@@ -226,7 +226,7 @@ export class HomeComponent implements OnInit {
       title: 'Home',
       description: 'Expert mobile and web development services. We build exceptional iOS, Android, and web applications that drive growth and transform businesses worldwide.',
       keywords: 'mobile app development, iOS development, Android development, web development, app development services, custom software, ForgeRoute Labs',
-      url: 'https://forgeroute.com/'
+      url: 'https://forgeroutelabs.com/'
     });
 
     // Add organization structured data
@@ -234,8 +234,8 @@ export class HomeComponent implements OnInit {
       '@context': 'https://schema.org',
       '@type': 'Organization',
       'name': 'ForgeRoute Labs',
-      'url': 'https://forgeroute.com',
-      'logo': 'https://forgeroute.com/assets/images/logo.png',
+      'url': 'https://forgeroutelabs.com',
+      'logo': 'https://forgeroutelabs.com/assets/images/logo.png',
       'description': 'Expert mobile and web development services. We build exceptional applications that drive growth and transform businesses.',
       'email': 'hello@forgeroute.com',
       'address': {

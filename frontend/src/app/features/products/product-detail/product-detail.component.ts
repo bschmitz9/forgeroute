@@ -124,7 +124,7 @@ export class ProductDetailComponent implements OnInit {
           title: product.name,
           description: product.description,
           keywords: `${product.name}, ${product.platforms?.join(', ') || ''}, ${product.category}, ${product.techStack?.join(', ') || ''}`,
-          url: `https://forgeroute.com/products/${product.id}`,
+          url: `https://forgeroutelabs.com/products/${product.id}`,
           type: 'product'
         });
 

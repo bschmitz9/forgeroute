@@ -277,7 +277,7 @@ export class AboutComponent implements OnInit {
       title: 'About Us',
       description: 'Learn about ForgeRoute Labs - a team of expert developers building innovative mobile and web applications. 50+ projects delivered with 98% client satisfaction.',
       keywords: 'about ForgeRoute Labs, development team, mobile app developers, web developers, software development company',
-      url: 'https://forgeroute.com/about'
+      url: 'https://forgeroutelabs.com/about'
     });
   }
 }

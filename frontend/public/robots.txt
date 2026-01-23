@@ -6,8 +6,8 @@ Allow: /
 # Disallow admin or internal pages if any exist in the future
 # Disallow: /admin/
 
-# Sitemap location (update with production URL)
-Sitemap: https://forgeroute.com/sitemap.xml
+# Sitemap location
+Sitemap: https://forgeroutelabs.com/sitemap.xml
 
 # Crawl-delay (optional, helps prevent server overload)
 # Crawl-delay: 10

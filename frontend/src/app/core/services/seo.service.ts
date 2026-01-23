@@ -17,7 +17,7 @@ export class SeoService {
   private meta = inject(Meta);
   private titleService = inject(Title);
 
-  private readonly baseUrl = 'https://forgeroute.com'; // Update with actual production URL
+  private readonly baseUrl = 'https://forgeroutelabs.com';
   private readonly defaultImage = `${this.baseUrl}/assets/images/og-default.jpg`;
   private readonly siteName = 'ForgeRoute Labs';
 

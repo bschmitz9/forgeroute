@@ -239,7 +239,7 @@ export class DemoComponent implements OnInit {
       title: 'Request a Demo',
       description: 'Schedule a personalized demo of our products and see how ForgeRoute Labs can help your business grow with custom mobile and web applications.',
       keywords: 'demo request, schedule demo, product demo, consultation, app demo',
-      url: 'https://forgeroute.com/demo'
+      url: 'https://forgeroutelabs.com/demo'
     });
 
     this.productService.getAllProducts().subscribe(products => {

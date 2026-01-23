@@ -151,7 +151,7 @@ export class ContactComponent implements OnInit {
       title: 'Contact Us',
       description: 'Get in touch with ForgeRoute Labs to discuss your mobile or web development project. We\'re here to help bring your ideas to life.',
       keywords: 'contact ForgeRoute Labs, get a quote, project inquiry, app development contact, software development inquiry',
-      url: 'https://forgeroute.com/contact'
+      url: 'https://forgeroutelabs.com/contact'
     });
   }
 

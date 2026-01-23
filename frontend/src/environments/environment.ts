@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://api.forgeroute.com/api/v1',
+  apiUrl: 'https://api.forgeroutelabs.com/api/v1',
 };

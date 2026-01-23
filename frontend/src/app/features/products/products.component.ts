@@ -98,7 +98,7 @@ export class ProductsComponent implements OnInit {
       title: 'Our Products',
       description: 'Explore our portfolio of innovative mobile and web applications including IntentBrief, BillBeacon, and Leadory. See what we can build for your business.',
       keywords: 'mobile apps, iOS apps, Android apps, web applications, IntentBrief, BillBeacon, Leadory, portfolio, case studies',
-      url: 'https://forgeroute.com/products'
+      url: 'https://forgeroutelabs.com/products'
     });
 
     this.productService.getAllProducts().subscribe(products => {
