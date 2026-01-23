@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import prisma from '../config/database';
 import { emailService } from '../services/email.service';
-import { DemoRequestData } from '../../../shared/validators/demo.schema';
+import { DemoRequestData } from '../validators/demo.schema';
 
 export const submitDemo = async (req: Request, res: Response) => {
   try {

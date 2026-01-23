@@ -2,7 +2,7 @@ import { Router } from 'express';
 import { submitDemo } from '../controllers/demo.controller';
 import { validateRequest } from '../middleware/validator';
 import { demoRateLimiter } from '../middleware/rate-limiter';
-import { demoRequestSchema } from '../../../shared/validators/demo.schema';
+import { demoRequestSchema } from '../validators/demo.schema';
 
 const router = Router();
 

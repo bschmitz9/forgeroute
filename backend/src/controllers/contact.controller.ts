@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import prisma from '../config/database';
 import { emailService } from '../services/email.service';
-import { ContactFormData } from '../../../shared/validators/contact.schema';
+import { ContactFormData } from '../validators/contact.schema';
 
 export const submitContact = async (req: Request, res: Response) => {
   try {

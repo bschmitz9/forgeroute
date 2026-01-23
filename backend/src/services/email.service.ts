@@ -1,5 +1,5 @@
-import { ContactFormData } from '../../../shared/validators/contact.schema';
-import { DemoRequestData } from '../../../shared/validators/demo.schema';
+import { ContactFormData } from '../validators/contact.schema';
+import { DemoRequestData } from '../validators/demo.schema';
 import nodemailer from 'nodemailer';
 import type { Transporter } from 'nodemailer';
 
