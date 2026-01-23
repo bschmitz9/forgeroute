@@ -1,57 +1,61 @@
 import { ContactFormData } from '../../../shared/validators/contact.schema';
 import { DemoRequestData } from '../../../shared/validators/demo.schema';
+import nodemailer from 'nodemailer';
+import type { Transporter } from 'nodemailer';
 
 export class EmailService {
-  private apiKey: string;
+  private transporter: Transporter;
   private notificationEmail: string;
+  private fromEmail: string;
 
   constructor() {
-    this.apiKey = process.env.RESEND_API_KEY || '';
     this.notificationEmail = process.env.NOTIFICATION_EMAIL || 'hello@forgeroute.com';
+    this.fromEmail = process.env.ZOHO_EMAIL || 'noreply@forgeroutelabs.com';
+
+    // Create Zoho SMTP transporter
+    this.transporter = nodemailer.createTransport({
+      host: 'smtp.zoho.com',
+      port: 465,
+      secure: true, // use SSL
+      auth: {
+        user: process.env.ZOHO_EMAIL,
+        pass: process.env.ZOHO_PASSWORD,
+      },
+    });
   }
 
   async sendContactNotification(data: ContactFormData): Promise<void> {
-    // TODO: Implement actual email sending with Resend
-    // For now, just log the submission
-    console.log('[EMAIL] Contact form submission:', {
-      to: this.notificationEmail,
-      from: data.email,
-      subject: `New Contact Form Submission from ${data.name}`,
-      data,
-    });
+    try {
+      await this.transporter.sendMail({
+        from: `"ForgeRoute Labs" <${this.fromEmail}>`,
+        to: this.notificationEmail,
+        replyTo: data.email,
+        subject: `New Contact Form Submission from ${data.name}`,
+        html: this.generateContactEmailHtml(data),
+      });
 
-    // Uncomment when Resend API key is available:
-    /*
-    const resend = new Resend(this.apiKey);
-    await resend.emails.send({
-      from: 'ForgeRoute Labs <noreply@forgeroute.com>',
-      to: this.notificationEmail,
-      subject: `New Contact Form Submission from ${data.name}`,
-      html: this.generateContactEmailHtml(data),
-    });
-    */
+      console.log('[EMAIL] Contact form notification sent successfully');
+    } catch (error) {
+      console.error('[EMAIL] Failed to send contact notification:', error);
+      throw new Error('Failed to send email notification');
+    }
   }
 
   async sendDemoNotification(data: DemoRequestData): Promise<void> {
-    // TODO: Implement actual email sending with Resend
-    // For now, just log the submission
-    console.log('[EMAIL] Demo request submission:', {
-      to: this.notificationEmail,
-      from: data.email,
-      subject: `New Demo Request from ${data.name} at ${data.company}`,
-      data,
-    });
+    try {
+      await this.transporter.sendMail({
+        from: `"ForgeRoute Labs" <${this.fromEmail}>`,
+        to: this.notificationEmail,
+        replyTo: data.email,
+        subject: `New Demo Request from ${data.name} at ${data.company}`,
+        html: this.generateDemoEmailHtml(data),
+      });
 
-    // Uncomment when Resend API key is available:
-    /*
-    const resend = new Resend(this.apiKey);
-    await resend.emails.send({
-      from: 'ForgeRoute Labs <noreply@forgeroute.com>',
-      to: this.notificationEmail,
-      subject: `New Demo Request from ${data.name} at ${data.company}`,
-      html: this.generateDemoEmailHtml(data),
-    });
-    */
+      console.log('[EMAIL] Demo request notification sent successfully');
+    } catch (error) {
+      console.error('[EMAIL] Failed to send demo notification:', error);
+      throw new Error('Failed to send email notification');
+    }
   }
 
   private generateContactEmailHtml(data: ContactFormData): string {
