@@ -1,0 +1,13 @@
+# robots.txt for ForgeRoute Labs
+
+User-agent: *
+Allow: /
+
+# Disallow admin or internal pages if any exist in the future
+# Disallow: /admin/
+
+# Sitemap location (update with production URL)
+Sitemap: https://forgeroute.com/sitemap.xml
+
+# Crawl-delay (optional, helps prevent server overload)
+# Crawl-delay: 10
