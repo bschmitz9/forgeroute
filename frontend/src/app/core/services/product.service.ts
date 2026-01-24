@@ -33,8 +33,8 @@ export class ProductService {
       {
         id: 'intentbrief',
         name: 'IntentBrief',
-        tagline: 'AI-Powered Product Requirements',
-        description: 'IntentBrief transforms your product ideas into detailed, actionable requirements documents using advanced AI. Create comprehensive product briefs in minutes, not hours.',
+        tagline: 'Daily Insights for Personal Growth',
+        description: 'IntentBrief delivers 3 curated insights daily, tailored to your chosen personal growth goal—whether that\'s building confidence, improving focus, or getting healthier. Listen on the go with audio briefs, track your streak, and follow multi-week Growth Paths for deeper transformation.',
         category: 'mobile',
         platforms: ['iOS'],
         icon: '/assets/images/products/intentbrief-icon.png',
@@ -43,11 +43,11 @@ export class ProductService {
           '/assets/images/products/intentbrief-2.png'
         ],
         features: [
-          'AI-generated product requirements',
-          'Collaborative editing',
-          'Export to multiple formats',
-          'Template library',
-          'Team workspace management'
+          '3 daily curated insights',
+          'Audio briefs for on-the-go listening',
+          'Streak tracking to build consistency',
+          'Multi-week Growth Paths',
+          'Personalized to your growth goals'
         ],
         techStack: ['Swift', 'Xcode', 'UIKit', 'OpenAI', 'Node.js', 'PostgreSQL'],
         websiteUrl: 'https://intentbrief.app/',
@@ -62,7 +62,7 @@ export class ProductService {
         tagline: 'Smart Bill Tracking & Reminders',
         description: 'Never miss a bill payment again. BillBeacon helps you track all your recurring bills, get timely reminders, and manage your subscriptions in one place.',
         category: 'mobile',
-        platforms: ['iOS', 'Android'],
+        platforms: ['iOS'],
         icon: '/assets/images/products/billbeacon-icon.png',
         screenshots: [
           '/assets/images/products/billbeacon-1.png',
