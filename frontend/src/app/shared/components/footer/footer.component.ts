@@ -44,8 +44,8 @@ import { RouterLink } from '@angular/router';
             <h4 class="text-white font-semibold mb-4">Get in Touch</h4>
             <ul class="space-y-2 text-sm">
               <li>
-                <a href="mailto:hello@forgeroute.com" class="hover:text-white transition-colors">
-                  hello&#64;forgeroute.com
+                <a href="mailto:hello@forgeroutelabs.com" class="hover:text-white transition-colors">
+                  hello&#64;forgeroutelabs.com
                 </a>
               </li>
               <li class="flex space-x-4 mt-4">
