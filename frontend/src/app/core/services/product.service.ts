@@ -36,7 +36,7 @@ export class ProductService {
         tagline: 'AI-Powered Product Requirements',
         description: 'IntentBrief transforms your product ideas into detailed, actionable requirements documents using advanced AI. Create comprehensive product briefs in minutes, not hours.',
         category: 'mobile',
-        platforms: ['iOS', 'Android'],
+        platforms: ['iOS'],
         icon: '/assets/images/products/intentbrief-icon.png',
         screenshots: [
           '/assets/images/products/intentbrief-1.png',
