@@ -1,41 +1,51 @@
 import { ContactFormData } from '../validators/contact.schema';
 import { DemoRequestData } from '../validators/demo.schema';
-import nodemailer from 'nodemailer';
-import type { Transporter } from 'nodemailer';
+import axios from 'axios';
 
 export class EmailService {
-  private transporter: Transporter;
   private notificationEmail: string;
   private fromEmail: string;
+  private apiKey: string;
 
   constructor() {
     this.notificationEmail = process.env.NOTIFICATION_EMAIL || 'hello@forgeroute.com';
     this.fromEmail = process.env.ZOHO_EMAIL || 'noreply@forgeroutelabs.com';
-
-    // Create Zoho SMTP transporter
-    this.transporter = nodemailer.createTransport({
-      host: 'smtp.zoho.com',
-      port: 587,
-      secure: false, // use STARTTLS
-      requireTLS: true,
-      auth: {
-        user: process.env.ZOHO_EMAIL,
-        pass: process.env.ZOHO_PASSWORD,
-      },
-      connectionTimeout: 10000, // 10 seconds
-      greetingTimeout: 10000,
-    });
+    this.apiKey = process.env.ZEPTOMAIL_API_KEY || '';
   }
 
   async sendContactNotification(data: ContactFormData): Promise<void> {
     try {
-      await this.transporter.sendMail({
-        from: `"ForgeRoute Labs" <${this.fromEmail}>`,
-        to: this.notificationEmail,
-        replyTo: data.email,
-        subject: `New Contact Form Submission from ${data.name}`,
-        html: this.generateContactEmailHtml(data),
-      });
+      await axios.post(
+        'https://api.zeptomail.com/v1.1/email',
+        {
+          from: {
+            address: this.fromEmail,
+            name: 'ForgeRoute Labs'
+          },
+          to: [
+            {
+              email_address: {
+                address: this.notificationEmail
+              }
+            }
+          ],
+          reply_to: [
+            {
+              address: data.email,
+              name: data.name
+            }
+          ],
+          subject: `New Contact Form Submission from ${data.name}`,
+          htmlbody: this.generateContactEmailHtml(data)
+        },
+        {
+          headers: {
+            'Authorization': this.apiKey,
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          }
+        }
+      );
 
       console.log('[EMAIL] Contact form notification sent successfully');
     } catch (error) {
@@ -46,13 +56,37 @@ export class EmailService {
 
   async sendDemoNotification(data: DemoRequestData): Promise<void> {
     try {
-      await this.transporter.sendMail({
-        from: `"ForgeRoute Labs" <${this.fromEmail}>`,
-        to: this.notificationEmail,
-        replyTo: data.email,
-        subject: `New Demo Request from ${data.name} at ${data.company}`,
-        html: this.generateDemoEmailHtml(data),
-      });
+      await axios.post(
+        'https://api.zeptomail.com/v1.1/email',
+        {
+          from: {
+            address: this.fromEmail,
+            name: 'ForgeRoute Labs'
+          },
+          to: [
+            {
+              email_address: {
+                address: this.notificationEmail
+              }
+            }
+          ],
+          reply_to: [
+            {
+              address: data.email,
+              name: data.name
+            }
+          ],
+          subject: `New Demo Request from ${data.name} at ${data.company}`,
+          htmlbody: this.generateDemoEmailHtml(data)
+        },
+        {
+          headers: {
+            'Authorization': this.apiKey,
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          }
+        }
+      );
 
       console.log('[EMAIL] Demo request notification sent successfully');
     } catch (error) {
