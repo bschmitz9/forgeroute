@@ -109,6 +109,8 @@ import { SeoService } from '../../core/services/seo.service';
               type="tel"
               id="phone"
               formControlName="phone"
+              (input)="formatPhoneNumber($event)"
+              placeholder="(555) 123-4567"
               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
               [class.border-red-500]="demoForm.get('phone')?.invalid && demoForm.get('phone')?.touched"
             />
@@ -245,6 +247,25 @@ export class DemoComponent implements OnInit {
     this.productService.getAllProducts().subscribe(products => {
       this.products = products;
     });
+  }
+
+  formatPhoneNumber(event: Event) {
+    const input = event.target as HTMLInputElement;
+    const value = input.value.replace(/\D/g, ''); // Remove all non-digits
+    let formattedValue = '';
+
+    if (value.length > 0) {
+      formattedValue = '(' + value.substring(0, 3);
+    }
+    if (value.length >= 4) {
+      formattedValue += ') ' + value.substring(3, 6);
+    }
+    if (value.length >= 7) {
+      formattedValue += '-' + value.substring(6, 10);
+    }
+
+    this.demoForm.patchValue({ phone: formattedValue }, { emitEvent: false });
+    input.value = formattedValue;
   }
 
   onSubmit() {
