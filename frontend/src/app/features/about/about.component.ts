@@ -35,7 +35,7 @@ import { SeoService } from '../../core/services/seo.service';
             <div class="text-sm sm:text-base text-gray-600 font-medium">Client Satisfaction</div>
           </div>
           <div class="text-center">
-            <div class="text-3xl sm:text-4xl md:text-5xl font-bold text-primary-600 mb-2">5+</div>
+            <div class="text-3xl sm:text-4xl md:text-5xl font-bold text-primary-600 mb-2">11+</div>
             <div class="text-sm sm:text-base text-gray-600 font-medium">Years Experience</div>
           </div>
           <div class="text-center">
