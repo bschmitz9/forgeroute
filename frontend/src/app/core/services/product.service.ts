@@ -33,7 +33,7 @@ export class ProductService {
       {
         id: 'intentbrief',
         name: 'IntentBrief',
-        tagline: 'Daily Insights for Personal Growth',
+        tagline: 'Daily Curated Insights',
         description: 'IntentBrief delivers 3 curated insights daily, tailored to your chosen personal growth goal—whether that\'s building confidence, improving focus, or getting healthier. Listen on the go with audio briefs, track your streak, and follow multi-week Growth Paths for deeper transformation.',
         category: 'mobile',
         platforms: ['iOS'],
