@@ -56,11 +56,16 @@ import { SeoService } from '../../core/services/seo.service';
               type="email"
               id="email"
               formControlName="email"
+              placeholder="you@example.com"
               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
               [class.border-red-500]="contactForm.get('email')?.invalid && contactForm.get('email')?.touched"
+              [class.border-green-500]="contactForm.get('email')?.valid && contactForm.get('email')?.touched"
             />
             @if (contactForm.get('email')?.invalid && contactForm.get('email')?.touched) {
-              <p class="text-red-500 text-sm mt-1">Please enter a valid email address</p>
+              <p class="text-red-500 text-sm mt-1">Please enter a valid email address (e.g., name@company.com)</p>
+            }
+            @if (contactForm.get('email')?.valid && contactForm.get('email')?.touched) {
+              <p class="text-green-600 text-sm mt-1">✓ Valid email</p>
             }
           </div>
 
