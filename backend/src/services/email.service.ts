@@ -15,6 +15,7 @@ export class EmailService {
 
   async sendContactNotification(data: ContactFormData): Promise<void> {
     try {
+      // Send notification to team
       await axios.post(
         'https://api.zeptomail.com/v1.1/email',
         {
@@ -48,9 +49,47 @@ export class EmailService {
       );
 
       console.log('[EMAIL] Contact form notification sent successfully');
+
+      // Send confirmation to submitter
+      await this.sendContactConfirmation(data);
     } catch (error) {
       console.error('[EMAIL] Failed to send contact notification:', error);
       throw new Error('Failed to send email notification');
+    }
+  }
+
+  async sendContactConfirmation(data: ContactFormData): Promise<void> {
+    try {
+      await axios.post(
+        'https://api.zeptomail.com/v1.1/email',
+        {
+          from: {
+            address: this.fromEmail,
+            name: 'ForgeRoute Labs'
+          },
+          to: [
+            {
+              email_address: {
+                address: data.email
+              }
+            }
+          ],
+          subject: 'Thank you for contacting ForgeRoute Labs',
+          htmlbody: this.generateConfirmationEmailHtml(data)
+        },
+        {
+          headers: {
+            'Authorization': this.apiKey,
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          }
+        }
+      );
+
+      console.log('[EMAIL] Contact confirmation sent successfully');
+    } catch (error) {
+      console.error('[EMAIL] Failed to send confirmation:', error);
+      // Don't throw - confirmation email failure shouldn't block the form submission
     }
   }
 
@@ -121,6 +160,25 @@ export class EmailService {
       ${data.preferredDate ? `<p><strong>Preferred Date:</strong> ${data.preferredDate}</p>` : ''}
       ${data.preferredTime ? `<p><strong>Preferred Time:</strong> ${data.preferredTime}</p>` : ''}
       ${data.message ? `<p><strong>Message:</strong> ${data.message}</p>` : ''}
+    `;
+  }
+
+  private generateConfirmationEmailHtml(data: ContactFormData): string {
+    return `
+      <div style="font-family: system-ui, -apple-system, sans-serif; max-width: 600px; margin: 0 auto;">
+        <h2 style="color: #3b82f6;">Thank you for contacting us!</h2>
+        <p>Hi ${data.name},</p>
+        <p>We've received your message and a member of our team will get back to you within 24 hours.</p>
+        <p>In the meantime, feel free to explore our <a href="https://forgeroutelabs.com/products" style="color: #3b82f6;">products</a> or learn more <a href="https://forgeroutelabs.com/about" style="color: #3b82f6;">about us</a>.</p>
+        <p>Best regards,<br>
+        <strong>The ForgeRoute Labs Team</strong></p>
+        <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 32px 0;">
+        <p style="font-size: 12px; color: #6b7280;">
+          ForgeRoute Labs<br>
+          Building innovative mobile and web applications<br>
+          <a href="https://forgeroutelabs.com" style="color: #3b82f6;">forgeroutelabs.com</a>
+        </p>
+      </div>
     `;
   }
 }
