@@ -15,12 +15,15 @@ export class EmailService {
     // Create Zoho SMTP transporter
     this.transporter = nodemailer.createTransport({
       host: 'smtp.zoho.com',
-      port: 465,
-      secure: true, // use SSL
+      port: 587,
+      secure: false, // use STARTTLS
+      requireTLS: true,
       auth: {
         user: process.env.ZOHO_EMAIL,
         pass: process.env.ZOHO_PASSWORD,
       },
+      connectionTimeout: 10000, // 10 seconds
+      greetingTimeout: 10000,
     });
   }
 

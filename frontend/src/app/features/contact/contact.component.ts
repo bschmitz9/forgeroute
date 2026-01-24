@@ -62,7 +62,7 @@ import { SeoService } from '../../core/services/seo.service';
               [class.border-green-500]="contactForm.get('email')?.valid && contactForm.get('email')?.touched"
             />
             @if (contactForm.get('email')?.invalid && contactForm.get('email')?.touched) {
-              <p class="text-red-500 text-sm mt-1">Please enter a valid email address (e.g., name@company.com)</p>
+              <p class="text-red-500 text-sm mt-1">Please enter a valid email address (e.g., name&#64;company.com)</p>
             }
             @if (contactForm.get('email')?.valid && contactForm.get('email')?.touched) {
               <p class="text-green-600 text-sm mt-1">✓ Valid email</p>
