@@ -67,6 +67,16 @@ import { SeoService } from '../../core/services/seo.service';
                   Visit Website →
                 </a>
               </div>
+            } @else if (product.id === 'cremationbridge') {
+              <!-- CremationBridge - Coming Soon -->
+              <div class="bg-gradient-to-br from-gray-700 to-gray-600 p-6 relative overflow-hidden">
+                <div class="absolute top-4 right-4 bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-sm font-semibold">Coming Soon</div>
+                <h3 class="text-2xl font-bold mb-2 text-white">{{product.name}}</h3>
+                <p class="text-white/90">{{product.tagline}}</p>
+              </div>
+              <div class="p-6">
+                <p class="text-gray-600 mb-4">{{product.description}}</p>
+              </div>
             } @else {
               <!-- Default styling -->
               <div class="p-6">

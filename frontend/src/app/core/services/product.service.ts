@@ -105,6 +105,21 @@ export class ProductService {
         websiteUrl: 'https://www.leadory.ai/',
         demoAvailable: true,
         featured: true
+      },
+      {
+        id: 'cremationbridge',
+        name: 'CremationBridge',
+        tagline: 'Coming Soon',
+        description: 'An exciting new product currently in development. Stay tuned for more details!',
+        category: 'mobile',
+        platforms: ['iOS'],
+        icon: '/assets/images/products/cremationbridge-icon.png',
+        screenshots: [],
+        features: [],
+        techStack: [],
+        demoAvailable: false,
+        featured: true,
+        comingSoon: true
       }
     ];
   }

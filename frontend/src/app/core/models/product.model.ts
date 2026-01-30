@@ -14,4 +14,5 @@ export interface Product {
   websiteUrl?: string;
   demoAvailable: boolean;
   featured: boolean;
+  comingSoon?: boolean;
 }

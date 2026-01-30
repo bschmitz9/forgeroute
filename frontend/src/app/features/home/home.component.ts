@@ -160,6 +160,18 @@ import { SeoService } from '../../core/services/seo.service';
                     </svg>
                   </a>
                 </div>
+              } @else if (product.id === 'cremationbridge') {
+                <!-- CremationBridge - Coming Soon -->
+                <div class="bg-gradient-to-br from-gray-700 to-gray-600 h-48 flex items-center justify-center relative overflow-hidden">
+                  <div class="absolute top-4 right-4 bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-sm font-semibold">Coming Soon</div>
+                  <div class="text-white text-center px-4 relative z-10">
+                    <h3 class="text-2xl font-bold">{{product.name}}</h3>
+                    <p class="mt-2">{{product.tagline}}</p>
+                  </div>
+                </div>
+                <div class="p-6">
+                  <p class="text-gray-600 mb-4">{{product.description}}</p>
+                </div>
               } @else {
                 <!-- Default styling for other products -->
                 <div class="bg-gradient-to-br from-primary-500 to-primary-700 h-48 flex items-center justify-center">
