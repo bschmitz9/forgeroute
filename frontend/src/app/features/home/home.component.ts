@@ -15,7 +15,7 @@ import { SeoService } from '../../core/services/seo.service';
       <div class="container mx-auto px-4 sm:px-6">
         <div class="max-w-4xl mx-auto text-center">
           <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight">
-            <span class="text-primary-200">ForgeRoute Labs</span>
+            <span class="text-primary-200">Test</span>
           </h1>
         </div>
       </div>
