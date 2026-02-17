@@ -79,7 +79,7 @@ import { SeoService } from '../../core/services/seo.service';
       </div>
     </section>
 
-    <!-- Featured Products Section -->
+    <!-- Featured Products Section (temporarily commented out)
     <section class="py-12 sm:py-16 md:py-20">
       <div class="container mx-auto px-4 sm:px-6">
         <div class="text-center mb-10 sm:mb-12 md:mb-16">
@@ -91,7 +91,6 @@ import { SeoService } from '../../core/services/seo.service';
           @for (product of featuredProducts; track product.id) {
             <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow overflow-hidden">
               @if (product.id === 'intentbrief') {
-                <!-- IntentBrief - Purple gradient with orange-pink -->
                 <div class="bg-gradient-to-br from-orange-500 via-pink-500 to-fuchsia-600 h-48 flex items-center justify-center">
                   <div class="text-white text-center px-4">
                     <h3 class="text-2xl font-bold">{{product.name}}</h3>
@@ -114,7 +113,6 @@ import { SeoService } from '../../core/services/seo.service';
                   </a>
                 </div>
               } @else if (product.id === 'billbeacon') {
-                <!-- BillBeacon - Navy with teal accent -->
                 <div class="bg-gradient-to-br from-blue-900 to-blue-800 h-48 flex items-center justify-center">
                   <div class="text-white text-center px-4">
                     <h3 class="text-2xl font-bold">{{product.name}}</h3>
@@ -137,7 +135,6 @@ import { SeoService } from '../../core/services/seo.service';
                   </a>
                 </div>
               } @else if (product.id === 'leadory') {
-                <!-- Leadory - Scout blue with neon aqua -->
                 <div class="bg-gradient-to-br from-blue-600 to-indigo-700 h-48 flex items-center justify-center relative overflow-hidden">
                   <div class="absolute inset-0 bg-gradient-to-br from-cyan-400/20 to-transparent"></div>
                   <div class="text-white text-center px-4 relative z-10">
@@ -161,7 +158,6 @@ import { SeoService } from '../../core/services/seo.service';
                   </a>
                 </div>
               } @else if (product.id === 'cremationbridge') {
-                <!-- CremationBridge - Coming Soon -->
                 <div class="bg-gradient-to-br from-gray-700 to-gray-600 h-48 flex items-center justify-center relative overflow-hidden">
                   <div class="absolute top-4 right-4 bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-sm font-semibold">Coming Soon</div>
                   <div class="text-white text-center px-4 relative z-10">
@@ -173,7 +169,6 @@ import { SeoService } from '../../core/services/seo.service';
                   <p class="text-gray-600 mb-4">{{product.description}}</p>
                 </div>
               } @else {
-                <!-- Default styling for other products -->
                 <div class="bg-gradient-to-br from-primary-500 to-primary-700 h-48 flex items-center justify-center">
                   <div class="text-white text-center px-4">
                     <h3 class="text-2xl font-bold">{{product.name}}</h3>
@@ -208,6 +203,7 @@ import { SeoService } from '../../core/services/seo.service';
         </div>
       </div>
     </section>
+    -->
 
     <!-- CTA Section -->
     <section class="bg-primary-600 text-white py-12 sm:py-16 md:py-20">
