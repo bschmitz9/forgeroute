@@ -8,46 +8,59 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
   template: `
     <div class="container mx-auto px-4 py-12">
       <!-- Outlander -->
-      <rf-booking-widget
-        rental-id="1"
-        resort-alias="mooselake"
-        primary-color="#059669">
-      </rf-booking-widget>
+      <section class="mb-12">
+        <rf-booking-widget
+          rental-id="1"
+          resort-alias="mooselake"
+          primary-color="#0D9488">
+        </rf-booking-widget>
+      </section>
 
       <!-- RV Site 1 -->
-      <rf-booking-widget
-        rental-id="308"
-        resort-alias="mooselake"
-        primary-color="#059669">
-      </rf-booking-widget>
+      <section class="mb-12">
+        <rf-booking-widget
+          rental-id="308"
+          resort-alias="mooselake"
+          primary-color="#0D9488">
+        </rf-booking-widget>
+      </section>
 
       <!-- Tent Site 1 -->
-      <rf-booking-widget
-        rental-id="360"
-        resort-alias="mooselake"
-        primary-color="#059669">
-      </rf-booking-widget>
+      <section class="mb-12">
+        <rf-booking-widget
+          rental-id="360"
+          resort-alias="mooselake"
+          primary-color="#0D9488">
+        </rf-booking-widget>
+      </section>
 
       <!-- Greeny -->
-      <rf-booking-widget
-        rental-id="364"
-        resort-alias="mooselake"
-        primary-color="#059669">
-      </rf-booking-widget>
+      <section class="mb-12">
+        <rf-booking-widget
+          rental-id="364"
+          resort-alias="mooselake"
+          primary-color="#0D9488">
+        </rf-booking-widget>
+      </section>
 
       <!-- North Side Pavilion -->
-      <rf-booking-widget
-        rental-id="367"
-        resort-alias="mooselake"
-        primary-color="#059669">
-      </rf-booking-widget>
+      <section class="mb-12">
+        <rf-booking-widget
+          rental-id="367"
+          resort-alias="mooselake"
+          primary-color="#0D9488">
+        </rf-booking-widget>
+      </section>
 
       <!-- Pontoon 1 -->
-      <rf-booking-widget
-        rental-id="138"
-        resort-alias="mooselake"
-        primary-color="#059669">
-      </rf-booking-widget>
+      <section>
+        <rf-booking-widget
+          rental-id="138"
+          resort-alias="mooselake"
+          primary-color="#0D9488"
+          object-type="BOAT">
+        </rf-booking-widget>
+      </section>
     </div>
   `
 })
