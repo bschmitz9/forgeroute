@@ -207,7 +207,7 @@ import { SeoService } from '../../core/services/seo.service';
     </section>
     -->
 
-    <!-- CTA Section -->
+    <!-- CTA Section (temporarily commented out)
     <section class="bg-primary-600 text-white py-12 sm:py-16 md:py-20">
       <div class="container mx-auto px-4 sm:px-6 text-center">
         <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4 px-4">Ready to Build Your Next Project?</h2>
@@ -224,6 +224,7 @@ import { SeoService } from '../../core/services/seo.service';
         </div>
       </div>
     </section>
+    -->
   `
 })
 export class HomeComponent implements OnInit {
