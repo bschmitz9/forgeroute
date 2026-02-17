@@ -15,11 +15,11 @@ import { SeoService } from '../../core/services/seo.service';
       <div class="container mx-auto px-4 sm:px-6">
         <div class="max-w-4xl mx-auto text-center">
           <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight">
-            Build the Future with <span class="text-primary-200">ForgeRoute Labs</span>
+            <!-- Build the Future with --> <span class="text-primary-200">ForgeRoute Labs</span>
           </h1>
-          <p class="text-lg sm:text-xl md:text-2xl mb-6 md:mb-8 text-primary-100 px-4">
+          <!-- <p class="text-lg sm:text-xl md:text-2xl mb-6 md:mb-8 text-primary-100 px-4">
             Expert mobile and web development services. We build exceptional applications that drive growth and transform businesses.
-          </p>
+          </p> -->
           <!-- Buttons temporarily removed
           <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
             <a routerLink="/contact"
