@@ -20,6 +20,7 @@ import { SeoService } from '../../core/services/seo.service';
           <p class="text-lg sm:text-xl md:text-2xl mb-6 md:mb-8 text-primary-100 px-4">
             Expert mobile and web development services. We build exceptional applications that drive growth and transform businesses.
           </p>
+          <!-- Buttons temporarily removed
           <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
             <a routerLink="/contact"
                class="bg-white text-primary-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-primary-50 transition-colors text-center">
@@ -30,6 +31,7 @@ import { SeoService } from '../../core/services/seo.service';
               View Our Work
             </a>
           </div>
+          -->
         </div>
       </div>
     </section>
