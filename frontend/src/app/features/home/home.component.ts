@@ -36,7 +36,7 @@ import { SeoService } from '../../core/services/seo.service';
       </div>
     </section>
 
-    <!-- Features Section -->
+    <!-- Features Section (temporarily commented out)
     <section class="py-12 sm:py-16 md:py-20 bg-gray-50">
       <div class="container mx-auto px-4 sm:px-6">
         <div class="text-center mb-10 sm:mb-12 md:mb-16">
@@ -80,6 +80,7 @@ import { SeoService } from '../../core/services/seo.service';
         </div>
       </div>
     </section>
+    -->
 
     <!-- Featured Products Section (temporarily commented out)
     <section class="py-12 sm:py-16 md:py-20">
