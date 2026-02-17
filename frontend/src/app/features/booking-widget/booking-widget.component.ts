@@ -12,7 +12,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
         <rf-booking-widget
           rental-id="1"
           resort-alias="mooselake"
-          primary-color="#0D9488">
+          primary-color="#5D2E2E">
         </rf-booking-widget>
       </section>
 
@@ -21,7 +21,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
         <rf-booking-widget
           rental-id="308"
           resort-alias="mooselake"
-          primary-color="#0D9488">
+          primary-color="#5D2E2E">
         </rf-booking-widget>
       </section>
 
@@ -30,7 +30,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
         <rf-booking-widget
           rental-id="360"
           resort-alias="mooselake"
-          primary-color="#0D9488">
+          primary-color="#5D2E2E">
         </rf-booking-widget>
       </section>
 
@@ -39,7 +39,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
         <rf-booking-widget
           rental-id="364"
           resort-alias="mooselake"
-          primary-color="#0D9488">
+          primary-color="#5D2E2E">
         </rf-booking-widget>
       </section>
 
@@ -48,7 +48,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
         <rf-booking-widget
           rental-id="367"
           resort-alias="mooselake"
-          primary-color="#0D9488">
+          primary-color="#5D2E2E">
         </rf-booking-widget>
       </section>
 
@@ -57,7 +57,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
         <rf-booking-widget
           rental-id="138"
           resort-alias="mooselake"
-          primary-color="#0D9488"
+          primary-color="#5D2E2E"
           object-type="BOAT">
         </rf-booking-widget>
       </section>
