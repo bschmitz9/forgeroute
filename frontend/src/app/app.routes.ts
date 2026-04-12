@@ -6,6 +6,7 @@ import { ContactComponent } from './features/contact/contact.component';
 import { DemoComponent } from './features/demo/demo.component';
 import { AboutComponent } from './features/about/about.component';
 import { BookingWidgetComponent } from './features/booking-widget/booking-widget.component';
+import { MapWidgetComponent } from './features/map-widget/map-widget.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent, title: 'ForgeRoute Labs - Build Your Next App' },
@@ -15,5 +16,6 @@ export const routes: Routes = [
   { path: 'demo', component: DemoComponent, title: 'Request a Demo - ForgeRoute Labs' },
   { path: 'about', component: AboutComponent, title: 'About Us - ForgeRoute Labs' },
   { path: 'booking-widget', component: BookingWidgetComponent, title: 'Booking Widget - ForgeRoute Labs' },
+  { path: 'map-widget', component: MapWidgetComponent, title: 'Map Widget - ForgeRoute Labs' },
   { path: '**', redirectTo: '' }
 ];

@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { ProductService } from '../../core/services/product.service';
@@ -9,6 +9,7 @@ import { SeoService } from '../../core/services/seo.service';
   selector: 'app-home',
   standalone: true,
   imports: [CommonModule, RouterLink],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   template: `
     <!-- Hero Section -->
     <section class="bg-gradient-to-br from-primary-600 to-primary-800 text-white py-16 md:py-24 lg:py-32">
@@ -19,6 +20,16 @@ import { SeoService } from '../../core/services/seo.service';
           </h1>
         </div>
       </div>
+    </section>
+
+    <!-- Map Widget -->
+    <section class="w-full" style="height: 600px;">
+      <rf-map-widget
+        resort-alias="mooselake"
+        primary-color="#059669"
+        height="100%"
+        width="100%">
+      </rf-map-widget>
     </section>
   `
 })
